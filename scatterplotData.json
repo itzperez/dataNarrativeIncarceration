@@ -1,0 +1,299 @@
+var scatterplotData = [
+    {
+        "year": "2016",
+        "state": "AZ",
+        "pop18to64": "4431767",
+        "jailPop": "13078",
+        "prisonPop": "41318",
+        "jailRate": "295.0967413",
+        "prisonRate": "932.3143568"
+    },
+    {
+        "year": "2016",
+        "state": "AL",
+        "pop18to64": "3176322",
+        "jailPop": "14206.33",
+        "prisonPop": "24791",
+        "jailRate": "447.2572365",
+        "prisonRate": "780.4939172"
+    },
+    {
+        "year": "2016",
+        "state": "CA",
+        "pop18to64": "26346687",
+        "jailPop": "76347.67",
+        "prisonPop": "127162",
+        "jailRate": "289.7809125",
+        "prisonRate": "482.648919"
+    },
+    {
+        "year": "2016",
+        "state": "CO",
+        "pop18to64": "3749981",
+        "jailPop": "12562",
+        "prisonPop": "19569",
+        "jailRate": "334.9883639",
+        "prisonRate": "521.842644"
+    },
+    {
+        "year": "2016",
+        "state": "FL",
+        "pop18to64": "13131862",
+        "jailPop": "53056",
+        "prisonPop": "97259",
+        "jailRate": "404.0249585",
+        "prisonRate": "740.633735"
+    },
+    {
+        "year": "2016",
+        "state": "GA",
+        "pop18to64": "6878105",
+        "jailPop": "42937",
+        "prisonPop": "53234",
+        "jailRate": "624.256245",
+        "prisonRate": "773.9631774"
+    },
+    {
+        "year": "2016",
+        "state": "IN",
+        "pop18to64": "4338775",
+        "jailPop": "17554",
+        "prisonPop": "25677",
+        "jailRate": "404.5842432",
+        "prisonRate": "591.8029859"
+    },
+    {
+        "year": "2016",
+        "state": "IA",
+        "pop18to64": "2011950",
+        "jailPop": "4259",
+        "prisonPop": "9377",
+        "jailRate": "211.685181",
+        "prisonRate": "466.0652601"
+    },
+    {
+        "year": "2016",
+        "state": "KY",
+        "pop18to64": "2908399",
+        "jailPop": "21728.02",
+        "prisonPop": "23044",
+        "jailRate": "747.0783754",
+        "prisonRate": "792.3259498"
+    },
+    {
+        "year": "2016",
+        "state": "ME",
+        "pop18to64": "865530",
+        "jailPop": "1788.5",
+        "prisonPop": "2328",
+        "jailRate": "206.6363962",
+        "prisonRate": "268.9681467"
+    },
+    {
+        "year": "2016",
+        "state": "MA",
+        "pop18to64": "4620582",
+        "jailPop": "10679",
+        "prisonPop": "8685",
+        "jailRate": "231.1180713",
+        "prisonRate": "187.9633345"
+    },
+    {
+        "year": "2016",
+        "state": "MI",
+        "pop18to64": "6538960",
+        "jailPop": "16410.25",
+        "prisonPop": "39998",
+        "jailRate": "250.961162",
+        "prisonRate": "611.6874855"
+    },
+    {
+        "year": "2016",
+        "state": "MN",
+        "pop18to64": "3617704",
+        "jailPop": "6784",
+        "prisonPop": "9847",
+        "jailRate": "187.5222517",
+        "prisonRate": "272.1892117"
+    },
+    {
+        "year": "2016",
+        "state": "MS",
+        "pop18to64": "1942992",
+        "jailPop": "12555",
+        "prisonPop": "18727",
+        "jailRate": "646.1683836",
+        "prisonRate": "963.8228052"
+    },
+    {
+        "year": "2016",
+        "state": "MO",
+        "pop18to64": "3959486",
+        "jailPop": "12188",
+        "prisonPop": "32395",
+        "jailRate": "307.8177319",
+        "prisonRate": "818.1617513"
+    },
+    {
+        "year": "2016",
+        "state": "NE",
+        "pop18to64": "1222710",
+        "jailPop": "3614.01",
+        "prisonPop": "5184",
+        "jailRate": "295.5737665",
+        "prisonRate": "423.9762495"
+    },
+    {
+        "year": "2016",
+        "state": "NV",
+        "pop18to64": "1919722",
+        "jailPop": "7450",
+        "prisonPop": "13619",
+        "jailRate": "388.0770237",
+        "prisonRate": "709.4256356"
+    },
+    {
+        "year": "2016",
+        "state": "NH",
+        "pop18to64": "901623",
+        "jailPop": "1827",
+        "prisonPop": "2343",
+        "jailRate": "202.6345823",
+        "prisonRate": "259.8647106"
+    },
+    {
+        "year": "2016",
+        "state": "NJ",
+        "pop18to64": "5875594",
+        "jailPop": "13881",
+        "prisonPop": "21229",
+        "jailRate": "236.2484542",
+        "prisonRate": "361.3081503"
+    },
+    {
+        "year": "2016",
+        "state": "NY",
+        "pop18to64": "13134035",
+        "jailPop": "26057.5",
+        "prisonPop": "50047",
+        "jailRate": "198.3967608",
+        "prisonRate": "381.0481699"
+    },
+    {
+        "year": "2016",
+        "state": "NC",
+        "pop18to64": "6693481",
+        "jailPop": "18473",
+        "prisonPop": "34487",
+        "jailRate": "275.9849471",
+        "prisonRate": "515.232657"
+    },
+    {
+        "year": "2016",
+        "state": "ND",
+        "pop18to64": "495276",
+        "jailPop": "1445.95",
+        "prisonPop": "1675",
+        "jailRate": "291.9483278",
+        "prisonRate": "338.1952689"
+    },
+    {
+        "year": "2016",
+        "state": "OH",
+        "pop18to64": "7589672",
+        "jailPop": "19303.67",
+        "prisonPop": "50941",
+        "jailRate": "254.3412943",
+        "prisonRate": "671.1884255"
+    },
+    {
+        "year": "2016",
+        "state": "OK",
+        "pop18to64": "2533713",
+        "jailPop": "12071.67",
+        "prisonPop": "27018",
+        "jailRate": "476.4418859",
+        "prisonRate": "1066.340189"
+    },
+    {
+        "year": "2016",
+        "state": "PA",
+        "pop18to64": "8358657",
+        "jailPop": "37671",
+        "prisonPop": "51433",
+        "jailRate": "450.6824481",
+        "prisonRate": "615.3261224"
+    },
+    {
+        "year": "2016",
+        "state": "SC",
+        "pop18to64": "3219377",
+        "jailPop": "11455.5",
+        "prisonPop": "20511",
+        "jailRate": "355.8297149",
+        "prisonRate": "637.1108447"
+    },
+    {
+        "year": "2016",
+        "state": "SD",
+        "pop18to64": "546055",
+        "jailPop": "1787.54",
+        "prisonPop": "3697",
+        "jailRate": "327.355303",
+        "prisonRate": "677.0380273"
+    },
+    {
+        "year": "2016",
+        "state": "TN",
+        "pop18to64": "4357893",
+        "jailPop": "28697.5",
+        "prisonPop": "30119",
+        "jailRate": "658.5177745",
+        "prisonRate": "691.1367489"
+    },
+    {
+        "year": "2016",
+        "state": "TX",
+        "pop18to64": "18504634",
+        "jailPop": "69636.51",
+        "prisonPop": "149478",
+        "jailRate": "376.3193047",
+        "prisonRate": "807.7868495"
+    },
+    {
+        "year": "2016",
+        "state": "UT",
+        "pop18to64": "1950382",
+        "jailPop": "7285",
+        "prisonPop": "5982",
+        "jailRate": "373.5165727",
+        "prisonRate": "306.7091472"
+    },
+    {
+        "year": "2016",
+        "state": "WA",
+        "pop18to64": "4860896",
+        "jailPop": "12319",
+        "prisonPop": "17215",
+        "jailRate": "253.4306432",
+        "prisonRate": "354.1528146"
+    },
+    {
+        "year": "2016",
+        "state": "WI",
+        "pop18to64": "3788112",
+        "jailPop": "12926",
+        "prisonPop": "23155",
+        "jailRate": "341.2253914",
+        "prisonRate": "611.2543663"
+    },
+    {
+        "year": "2016",
+        "state": "WY",
+        "pop18to64": "379249",
+        "jailPop": "1534",
+        "prisonPop": "2318",
+        "jailRate": "404.4835978",
+        "prisonRate": "611.2079399"
+    }
+]
