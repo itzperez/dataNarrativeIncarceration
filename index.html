@@ -76,16 +76,12 @@
     <div id="container">
 
         <div class="textStyling">
-            <div style="font-size: 36px; margin-top: 10px;">
-                U.S. Criminal Justice?
+            <div style="font-size: 30px; margin-top: 10px;">
+                Visualizing U.S. criminal justice data
             </div>
 
-            <div style="font-size: 24px; margin-top: 10px;">
-                Visualizing U.S. criminal justice data from 1970 - 2016
-
-            </div>
             <div style="font-size: 12px; margin-top: 7px">
-                Alexis
+                Alexis Perez
             </div>
         </div>
 
@@ -93,20 +89,19 @@
             <h2>
                 Introduction
             </h2>
-            <p>The United States incarcerates 2.3 million people, one of the highest rates in the world (<a
-                    href="https://www.prisonpolicy.org/reports/pie2023.html" target="_blank" rel="noopener">The Prison
-                    Policy Initiative</a>). A common refrain is that the United States has 4% of the world's population,
-                yet has 20% of the world's prisoners (<a
+            <p>
+                The U.S. makes up 4% of the world's population yet hosts 20% of the world's prisoners (<a
                     href="https://www.aclu.org/issues/smart-justice/mass-incarceration" target="_blank"
-                    rel="noopener">ACLU</a>). Despite unusually high rates, using actual data to understand this system
-                &ndash; the incarcerated people, judicial system, its consequences &ndash; is hard, since data is
-                decentralized, disorganized, and accounted for via numerous different private and federal institutions.
+                    rel="noopener">ACLU</a>). Despite the high rates, understanding U.S. criminal justice data is hard since data is
+                decentralized, disorganized, variable. This data narrative analyzes rates of incarceration between 1970 - 2016.
             </p>
             <p>
-                Understanding incarceration data requires defining the terms “prison” and “jail”.
-                Although these terms are commonly used interchangeably, there are notable differences:
+                First, I will define the terms prison and jail, which are often used interchangeably despite being different.
             </p>
             <ol>
+                <li>
+                    Incarceration refers to someone who is in prison or jail.
+                </li>
                 <li>
                     Prisons operate at the federal or state level and hold, while jails operate at the local level.
                 </li>
@@ -119,12 +114,6 @@
                     About two thirds of U.S. incarcerations are at the prison level and one third at the jail level.
                 </li>
             </ol>
-            <p>
-                In this project, we use the most complete incarceration dataset we've found to explore the most common
-                types of
-                incarceration in America &ndash; jail and prison &ndash; comparing the two, its rates across the country
-                and over the last several decades.
-            </p>
         </div>
 
         <div class="textStyling">
@@ -133,24 +122,16 @@
             </h2>
             <p>Our data comes from the Vera Institute of Justice's <a
                     href="https://github.com/vera-institute/incarceration-trends" target="_blank"
-                    rel="noopener">Incarceration Trends Dataset</a>, which contains county and jurisdiction level data
-                for jails and prisons, as well as state level prison data, intermittently between 1970-2021. Built over
-                5 years from 2015 to 2020, this dataset pulls from collections in the US federal government's
-                Bureau of Justice Statistics. Other than prison, jail, and geographical information, this dataset also
-                contains demographic information about incarcerated populations.</p>
-            <p>From there, we performed data cleaning:</p>
+                    rel="noopener">Incarceration Trends Dataset</a>, which contains county, state, and federal incarceration data, 
+                    including demographic information about the incarcerated.</p>
+            <p> Before visualizing the data, I first cleaned the data:</p>
             <ol>
-                <li>We noticed that 1970-2016 had relatively complete prison and jail data, and that some states still
-                    had
-                    no or very incomplete data &ndash; specifically, CT, DE, HI, VT, and RI. So we narrowed down to only
-                    those years for our visualizations, and, when relevant, marked CT, DE, HI, VT, and RI as &ldquo;no
-                    data&rdquo; in our visualizations.</li>
-                <li>After removing all data from years outside of that, we grouped our data on a state level, including
-                    summing all the county population information for each year and state, and calculating rates from
-                    that data.</li>
-                <li>From there, we customize the dataset for the needs of each individual visualization. So we did some
-                    lightweight data cleaning &ndash; for instance, for the maps visualization, we computed
-                    national-level incarceration data.</li>
+                <li>While some states had relatively complete incarceration data, others did not. 
+                    I exlcuded the following states from the analysis due to incomplete data: CT, DE, HI, VT, and RI. </li>
+                <li>
+                    For each state that was not excluded, I summed the state's county-level incarceration in order to produce state-level incarceration rates.  
+                </li>
+
             </ol>
         </div>
 
@@ -159,13 +140,11 @@
                 Jail Rates vs. Prison Rates, 2016
             </h2>
             <p>
-                In this section, we examine incarceration population rates. Incarceration rates represent the
-                number of people in a given area per 100,000 people. For example, a rate of 500 signified that 500 out
-                100,000 people in a given area are incarcerated.
+                What is the correlation between jail rate and prison rate? 
             </p>
             <p>
-                The following scatterplot examines the correlation between jail population rate and prison population
-                rate by state for the year 2016. Note that only states that have prison and jail rate data available are
+                The following scatterplot answers this question. The prison and jail rates are plotted for each state for the year 2016. 
+                Note that only states that have prison and jail rate data available are
                 displayed (17 states are excluded from this visual).
             </p>
 
@@ -224,7 +203,7 @@
             <p>
                 The only states that have a higher jail rate than prison rate are Massachusetts and Utah. Generally states have a higher 
                 prison rate than jail rate. There are even a handful of states that have a very high prison rate but low jail rate, 
-                namely Arizona, Michigan, Missouri, and Ohio. These states have prison rate that are roughly 3x their jail rate! It is also interesting to note that the 
+                namely Arizona, Michigan, Missouri, and Ohio. These states have prison rate that are roughly 3x their jail rate! 
             </p>
             <p>
                 Another interesting observation is that northeastern states generally have both low prison and jail rates. We see that 
@@ -238,48 +217,15 @@
 
         </div>
 
-
         <div class="textStyling">
             <h2>
-                Total Prison and Jail Population
+                Incarceration trends
             </h2>
             <p>
-                Next we will take a look at the change of the total prison and jail population from 1983 to 2016. We
-                chose this as our year range because it was the only one in which prison data was included. If we
-                included all data from 1970, then there would have been a sharp jump at 1983. This is due to the fact
-                that only jail data was available from 1970 to 1982. Thus, we limited the data to be more accurately
-                representative.
-            </p>
-            <img src="Incarceration Population.png" width=800px, height=auto>
-            <p>
-                We can observe that the total incarcerated population increased every year from 1983 to
-                2009, except for a small dip in 2000. At its peak, the total population was 1,959,983 in 2009.
-                Furthermore, the population has slowly decreased every year from 2010 to 2016, except for a slight jump
-                in 2013.
+                How have incarceration rates changed over time?
             </p>
             <p>
-                Upon further inspection, we see that it only took 6 years for the population of incarcerated people to
-                more than double from 414,694 in 1983 to 905,074 in 1989. From it's initial number, it takes 12 years
-                for the population to more than triple to 1,342,014 in 1995. This suggets a relatively constant growth
-                from 1983 to 1995. Fortunately, the growth rate starts to slow down after the year 2000, and as
-                previously mentioned, the total incacerated population begins to slowly decrease after 2009.</p>
-            <p>The rise in jailing may be linked to the general rise in mass incarceration, especially in prison, that
-                began in 1970. According to <a
-                    href="https://www.vera.org/ending-mass-incarceration/causes-of-mass-incarceration" target="_blank"
-                    rel="noopener">Vera Justice Institute</a>, to respond to the drug epidemic, the government took a
-                law and order paradigm. This included longer, more punitive sentences even for nonviolent crimes.
-            </p>
-        </div>
-
-        <div class="textStyling">
-            <h2>
-                Rate of Population in Jail, By State
-            </h2>
-            <p>
-                To understand incarceration trends at a more geographical level, we now examine jail rates by state.
-            </p>
-            <p>
-                Hover over a state to view more details. Drag the slider to see data in different years.
+                The graph below displays jail rates per state between 1983 - 2016
             </p>
         </div>
 
@@ -300,29 +246,7 @@
                 population in 1983 to a peak at 0.38% in 2006-2009.</p>
             <p>A second noticeable pattern is that the Southern states consistently jail a higher rate of their
                 population &ndash; especially the Deep South, and specifically Louisiana. In fact, each year from
-                2008-2011, 1% of Louisiana&rsquo;s population was in jail at some point that year. Why does the US south
-                tend to jail a higher rate of their population than the rest of the country, and what is going on with
-                Louisiana?</p>
-            <p>A quick search reveals that Louisiana has been dubbed the &ldquo;incarceration capital of the
-                world,&rdquo; partly because many prisoners are serving life sentences without the possibility of
-                parole. But why then are its <em>jails</em> also so much more full?</p>
-            <p>People are kept jailed for months past their release date, and sometimes state prisoners are kept in
-                jails. In fact, a <a
-                    href="https://www.reuters.com/legal/government/louisianas-over-incarceration-is-part-deeply-rooted-pattern-2023-02-01/"
-                    target="_blank" rel="noopener">DOJ report</a> revealed that jails have &ldquo;no financial
-                incentive&rdquo; to reduce jail times or to refuse state prisoners because they are paid &ldquo;for each
-                day of over detention.&rdquo; Another reason for the over detention, according to <a
-                    href="https://www.washingtonpost.com/nation/2023/01/26/louisiana-overdetention-justice-department/"
-                    target="_blank" rel="noopener">Louisiana federal officials</a> themselves, is that Louisiana relies
-                on mailed or hand-delivered documents and manual documentation, leading to an outdated, slow inmate
-                release system.</p>
-            <p>
-                Fortunately, in 2017, Louisiana signed criminal justice reforms that have led to declining prison
-                populations and recidivism rates, funding reinvested to crime prevention and support &ndash; and instead
-                of being number one, it&rsquo;s now number two in the nation for its imprisonment rates. However,
-                Louisiana&rsquo;s system is still plagued with problems &ndash; the investigation into its over
-                detention practices came out in January 2023.
-            </p>
+                2008-2011, 1% of Louisiana&rsquo;s population was in jail at some point that year.</p
             <p>Since our dataset was missing large portions of <em>prison</em> data, the map above and our analysis only
                 includes data for people in <em>jail</em>. However, the prison population can be even larger than the
                 jailed population - the Prison Policy Institute <a
